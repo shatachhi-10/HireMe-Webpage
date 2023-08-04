@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <!-- Add the Tailwind CSS link -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="bg-gray-500 ">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- Logo or brand -->
+      <a href="/" class="cursor-pointer py-3 pr-7 mr-[450px]">
+        <img src="./images2/navlogo.png" width="125px" height="10px">
+     </a>
+
+      <!-- Mobile menu button -->
+      <button class="lg:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+
+      <!-- Desktop menu items -->
+      <div class="hidden lg:flex space-x-4 relative">
+        
+        <ul class="flex space-x-6">
+          <li class="text-white font-mullish py-7 hover:text-blue-300
+          cursor-pointer transition-all duration-200
+          relative group"><a href="#">Home</a>
+          <div class="absolute bottom-0 w-full h-1
+          hidden group-hover:block transition-all duration-200 bg-blue-300"></div>
+      </li>
+      <li class="text-white font-mullish py-7 hover:text-blue-300
+          cursor-pointer transition-all duration-200
+          relative group"><a href="#">Job Seekers</a>
+          <div class="absolute bottom-0 w-full h-1 bg-blue-300
+          hidden group-hover:block transition-all duration-200"></div>
+      </li>
+      
+  
+      <li class="text-white font-mullish py-7 hover:text-blue-300
+          cursor-pointer transition-all duration-200
+          relative group"><a href="#">Employers</a>
+          <div class="absolute bottom-0 w-full h-1 bg-blue-300
+          hidden group-hover:block transition-all duration-200"></div>
+      </li>
+       </ul>
+       
+       <div class=" ml-8 flex space-x-4">
+                       
+        <button class="py-2 px-5 font-mullish text-white
+        border-lightBlue border rounded-md text-sm font-bold hover:bg-gray-800 ">
+        <a href="nav.html">Log in</a></button>
+
+        <button class="py-2 px-2  font-mullish rounded-md text-sm font-bold
+        bg-white text-lightBlue border transition-all duration-200
+        hover:text-lightBlue500 flex hover:text-blue-300  " ><a href="signupform.html">Signup</a>
+        <svg
+        viewBox="0 0 24 24"
+        focusable="false"
+        class="w-[14px] h-[23px] ml-3"
+      >
+        <path
+          fill="currentColor"
+          d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+        ></path>
+      </svg></button>
+      </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Add JavaScript for the mobile menu toggle -->
+  <script>
+    const button = document.querySelector('button');
+    const menuItems = document.querySelector('.hidden');
+
+    button.addEventListener('click', () => {
+      menuItems.classList.toggle('hidden');
+    });
+  </script>
+</body>
+
+</html>
